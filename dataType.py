@@ -17,6 +17,6 @@ msg = '''
     job:%s
     
     you are less than average salary : $ %s 
-''' % (name, name, salary, job, 10000 - int(salary))
+''' % (name, name, salary, job, 30000 - int(salary))
 
 print(msg)
