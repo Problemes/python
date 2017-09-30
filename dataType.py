@@ -22,11 +22,10 @@ msg = ''' '''
 
 print(msg) '''
 
-
 ''' ---------- info of list -------------- '''
 
 a = ["xm", "xl", "xh", "xz", "xa", "xz"]
-#增删改查 切片[]
+# 增删改查 切片[]
 ## 查 a[%a: %b: %c]  %a:从a开始，取到b b为负值时候是指倒数第x个索引； 间隔c个，默认1 ，为负值时，表示从右往左取；
 ''' print("query: ", a[1:-1:1])
 
@@ -59,20 +58,19 @@ print("after del", a)
 del a
 print("after del all", a)#报错，删除这个a变量的内存 '''
 
-
 ''' ---------- info of list method -------------- '''
-print(a.count("xz")) #计算出现几次参数
+print(a.count("xz"))  # 计算出现几次参数
 x = [1, 2, 3]
 y = [4, 5, 6]
-x.extend(y) # 组装
+x.extend(y)  # 组装
 print(x)
 
-index = a.index("xz") #找参数在列表中的索引,取第一个位置，想取后面的参数索引值，用切片造小列表
+index = a.index("xz")  # 找参数在列表中的索引,取第一个位置，想取后面的参数索引值，用切片造小列表
 print(index)
 second_index = a[index + 1:].index("xz")
 print(second_index)
 
-a.reverse() # 倒序
+a.reverse()  # 倒序
 print("reverse: ", a)
 
 from audioop import reverse
@@ -80,10 +78,29 @@ from audioop import reverse
 num = [2, 4, 6, 2, 7, 4, 8, 0]
 num.sort(reverse=True)
 print(num)
-num.sort() #按照ASCII码顺序排
+num.sort()  # 按照ASCII码顺序排
 print(num)
 if type(num) is list:
     print("is list")
 else:
     print("is not list")
+
+''' ---------- info of dict -------------- '''
+
+d1 = {"name": "hr", "hobby": "girl"}
+d2 = dict({"name": "qq", "hobby": "boy"})
+print(d1, "\n", d2)
+print("查： D1name:", d1["name"])
+d1["name"] = "hrs"
+print("改：D1name:", d1["name"])
+returnVar = d1.setdefault("age", 18)
+print("新增属性返回值：", returnVar)
+print("增：", d1, "\n", d2)
+print("查keys：", d1.keys())
+print("查values：", d1.values())
+print("查items：", d1.items())
+print("查转换list：", list(d1.items()))
+d1.update(d2)
+print("合并dict：", d1, d2)
+
 

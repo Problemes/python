@@ -12,9 +12,12 @@ i = 0
 print("Goods Map:")
 
 while i < len(goods):
-
     print(i, ".", goods[i], ":", price[i])
     i += 1
+
+for ix in (goods, price):
+    print(ix)
+    print(ix)
 
 while 1:
     print("请输入购买的商品编号：")
